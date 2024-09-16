@@ -19,11 +19,7 @@ from io import BytesIO
 import  plotly.io as pio
 import kaleido
 from PIL import Image as PILImage
-
-
 # Load environment variables
-load_dotenv()
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 model = genai.GenerativeModel("models/gemini-1.5-flash-latest")
 
 def get_response(input_text, image=None, max_retries=3, base_wait_time=2):
